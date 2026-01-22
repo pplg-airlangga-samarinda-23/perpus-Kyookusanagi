@@ -28,7 +28,7 @@ $no = 1;
     <td><?= $book['pengarang']; ?></td>
     <td><?= $book['stok']; ?></td>
     <td>
-        <a href="edit.php">Edit</a> |
+        <a href="edit.php?id=<?= $book['id']; ?>">Edit</a> |
         <a href="delete.php">Hapus</a>
     </td>
 </tr>

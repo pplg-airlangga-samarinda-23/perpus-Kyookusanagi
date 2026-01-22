@@ -2,7 +2,7 @@
 
 <nav>
     <ul>
-        <li><a href="">Data Buku</a></li>
+        <li><a href="buku/index.php">Data Buku</a></li>
         <li><a href="">Peminjaman</a></li>
         <li><a href="">Pengembalian</a></li>
         <li><a href="login.php">Logout</a></li>
