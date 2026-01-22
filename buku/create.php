@@ -5,8 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $judul = $_POST['judul'];
     $pengarang = $_POST['pengarang'];
     $stok = $_POST['stok'];
-    $sql = "INSERT INTO buku (judul, pengarang, stok) VALUES (?,?,?)";
-    $result = $koneksi-> execute_query($sql, [$judul, $pengarang, $stok]);
+    $sql = "INSERT INTO buku (judul, pengarang, stok) VALUES (?, ?, ?)";
+    $stmt = $koneksi->prepare($sql);
+    $stmt->bind_param('ssi', $judul, $pengarang, $stok);
+    $result = $stmt->execute();
 
     if ($result) {
         header('Location: index.php');
