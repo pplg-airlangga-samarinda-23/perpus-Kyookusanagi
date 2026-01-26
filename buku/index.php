@@ -29,7 +29,7 @@ $no = 1;
     <td><?= $book['stok']; ?></td>
     <td>
         <a href="edit.php?id=<?= $book['id']; ?>">Edit</a> |
-        <a href="delete.php">Hapus</a>
+        <a href="delete.php?id=<?= $book['id']; ?>">Hapus</a>
     </td>
 </tr>
 <?php endforeach; ?>
